@@ -1,0 +1,173 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@font-face {
+    font-family: 'fonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+/* Formatação do body inteiro do site */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dddddd;
+    color: rgba(0,0,0,1);
+}
+
+
+/* Formatação do Menu */
+nav#menu{
+    display: block;
+}
+    /* Formatação da lista do menu */
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 550px;
+}
+        /* Formatação dos itens da lista do menu */
+nav#menu li{
+    display: inline-block;
+    background-color: #dddddd;
+    padding: 10px;
+    margin: 0px;
+    transition: background-color 1s;
+}
+    /* Determina o que acontece quando passo o mouse em cima das opções do Menu */
+nav#menu li:hover{
+    background-color: #606060;
+}
+    /* Formata o h1 do Menu */
+nav#menu h1{
+    display: none;
+}
+    /* Formata os links do Menu */
+nav#menu a{
+    color: black;
+    text-decoration: none;
+}
+    /* Determina o que acontece quando passo o mouse em cima do link das opções do Menu */
+nav#menu a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* Formatação da interface */
+div#interface {
+    width: 1100px;
+    background-color: #ffffff;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    padding: 10px;
+}
+    /* Formatação dos parágrafos */
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+    /* Formatação dos links na interface */
+a {
+    color: #606060;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+    /* Formatação do header */
+header#cabecalho {
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat left 80px;
+}
+        /* Formatação da imagem no header */
+header#cabecalho img#icone {
+    position: absolute;
+    left: 972px;
+    top: 58px;
+}
+        /* Formatação do h1 no header */
+header#cabecalho h1 {
+    font-family: 'fonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+        /* Formatação do h2 no header */
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15pt;
+    color: #888888;
+    padding: 0px;
+    margin-top: 0px;
+}
+    /* Formatação do section */
+section#corpo {
+    display: block;
+    width: auto;
+    padding: 10px;
+    margin: auto;
+}
+        /* Formatação dos textos da section */
+section#corpo p {
+    padding: 10px;
+}
+        /* Formatação dos artigos da section */
+article#noticia-principal h2 {
+    font-size: 12pt;
+    color: #606060;
+    background: #dddddd;
+    padding: 5px 10px 5px 10px;
+    margin: 10px;
+}
+        /* Formatação do cabeçalho do artigo */
+header#cabecalho-artigo h1 {
+    font-family: fonteLogo, sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+header#cabecalho-artigo h2 {
+    font-size: 14px;
+    color: #cecece;
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+}
+header#cabecalho-artigo h3 {
+    font-size: 15px;
+    color: #cecece;
+}
+header#cabecalho-artigo h3.direita {
+    font-size: 8pt;
+    color: #606060;
+    text-align: right;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+        /* Formatação do iframe na section */
+iframe#frame-spec {
+    height: 300px;
+    width: 530px;
+    border: none;
+    overflow: hidden;
+    margin: auto;
+}
+iframe#frame-spec::-webkit-scrollbar {
+    display: none;
+    overflow: hidden;
+}
+
+
+/* Formatação do footer */
+footer#rodape {
+    clear: both;
+    border-top: 1px #606060 solid;
+
+}
+footer#rodape p{
+    font-style: italic;
+    text-align: center;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+        <script language="JavaScript" src="_javascript/funcoes.js"></script>
+        <title>Tudo sobre Google Glass</title>
+    </head>
+    <body>
+        <div id="interface">
+            <header id="cabecalho">
+                <hgroup>
+                    <h1>Google Glass</h1>
+                    <h2>A revolução do Google está chegando</h2>
+                </hgroup>
+
+                <img id="icone" src="_imagens/contato.png">
+
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                    <ul>
+                        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+                        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+                        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+                        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section id="corpo">
+                <article id="noticia-principal">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Fale Conosco > Contato</h3>
+                            <h1>Formulário de Contato</h1>
+                            <h2>por Gustavo Guanabara</h2>
+                            <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+                        </hgroup>
+                    </header>
+                    <form method="post" id="formId" oninput="calc_total();">
+                        <fieldset id="usuario">
+                            <legend>Identificação do Usuário</legend>
+                            <p><label for="nomeId">Nome: </label><input type="text" placeholder="Nome completo" name="nomeName" id="nomeId" maxlength="50"/> </p>
+                            <p><label for="senhaId">Senha: </label><input type="password" placeholder="Digite sua senha" name="senhaName" id="senhaId" maxlength="50"> </p>
+                            <p><label for="emailId">E-mail: </label><input type="email" placeholder="seuemail@email.com" name="emailName" id="emailId" maxlength="30"> </p>
+                            <fieldset id="sexo">
+                                <legend>Sexo</legend>
+                                <p><input type="radio" name="sexoName" id="mascId"/><label for="mascId"> Masculino</label></p>
+                                <p><input type="radio" name="sexoName" id="femId"/><label for="femId"> Feminino</label></p>
+                            </fieldset>
+                            <p><label for="dataId">Data de Nascimento:</label> <input type="date" name="dataName" id="dataId"/></p>
+                        </fieldset>
+                        <fieldset id="endereco">
+                            <legend>Endereço do Usuário</legend>
+                            <p><label for="ruaId">Logradouro:</label> <input type="text" placeholder="Rua, Avenida ou Travessa" name="ruaName" id="ruaId" maxlength="80"/> <label for="numId">Número:</label> <input type="text" placeholder="00000" name="numName" id="numId" maxlength="10"/></p>
+                            <p>
+                                <label for="ufId">Estado:</label>
+                                    <select name="ufName" id="ufId">
+                                        <optgroup label="Região Sudeste">
+                                            <option>Minas Gerais</option>
+                                            <option>Rio De Janeiro</option>
+                                            <option>São Paulo</option>
+                                        </optgroup>
+                                        <optgroup label="Região Sul">
+                                            <option>Paraná</option>
+                                            <option selected>Santa Catarina</option>
+                                            <option>Rio Grande Do Sul</option>
+                                        </optgroup>
+                                    </select>
+                            </p>
+                            <p>
+                                <label for="cityId">Cidade:</label>
+                                    <input type="text" placeholder="Cidade" name="cityName" id="cityId" maxlength="40" list="cidades"/>
+                                    <datalist id="cidades">
+                                        <option value="Araranguá"></option>
+                                        <option value="Criciúma"></option>
+                                        <option value="Cocal Do Sul"></option>
+                                        <option value="Chapecó"></option>
+                                    </datalist>
+                            </p>
+                        </fieldset>
+                        <fieldset id="mensagem">
+                            <legend>Mensagem do Usuário</legend>
+                            <p>
+                                <label for="urgId"> Grau de Urgência:</label>
+                                Mín.<input type="range" name="urgName" id="urgId" min="0" max="10"/>Máx.
+                            </p>
+                            <p>
+                                <label for="mensagId">Mensagem:</label> </br>
+                                <textarea name="mensagName" id="mensagId" placeholder="Escreva aqui a sua mensagem." cols="62" rows="7"></textarea>
+                            </p>
+                        </fieldset>
+                        <fieldset id="pedido ">
+                            <legend>Quero um Google Glass</legend>
+                            <p><input type="checkbox" name="pedidoName" id="pedidoId" checked/> <label for="pedidoId">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                            <p><label for="corId">Cor: </label><input type="color" name="corName" id="corId" value="#0000FF"/></p>
+                            <p><label for="qntdId">Quantidade: </label><input type="number" name="qntdName" id="qntdId" min="0" max="10" value="0"/></p>
+                            <p><label for="totalId">Preço Total: R$ </label><input type="text" name="totalName" id="totalId" readonly/></p>
+                        </fieldset>
+                        <input type="image" src="_imagens/botao-enviar.png" name="enviarName" id="enviarId"/>
+                    </form>
+                </article>
+            </section>
+            <footer id="rodape">
+            <p>&copy; Copyright 2013 - by Gustavo Guanabara</p>
+            <p><a href="http://facebook.com/cursosemvideo/" target="_blank">Facebook</a> | <a href="http://twitter.com/cursosemvideo" target="_blank">Twitter</a></p>
+        </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,263 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@font-face {
+    font-family: 'fonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+/* Formatação do body inteiro do site */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dddddd;
+    color: rgba(0,0,0,1);
+}
+
+
+/* Formatação do Menu */
+nav#menu{
+    display: block;
+}
+/* Formatação da lista do menu */
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 550px;
+}
+/* Formatação dos itens da lista do menu */
+nav#menu li{
+    display: inline-block;
+    background-color: #dddddd;
+    padding: 10px;
+    margin: 0px;
+    transition: background-color 1s;
+}
+/* Determina o que acontece quando passo o mouse em cima das opções do Menu */
+nav#menu li:hover{
+    background-color: #606060;
+}
+/* Formata o h1 do Menu */
+nav#menu h1{
+    display: none;
+}
+/* Formata os links do Menu */
+nav#menu a{
+    color: black;
+    text-decoration: none;
+}
+/* Determina o que acontece quando passo o mouse em cima do link das opções do Menu */
+nav#menu a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* Formatação da interface */
+div#interface {
+    width: 1100px;
+    background-color: #ffffff;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    padding: 10px;
+}
+/* Formatação dos parágrafos */
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+/* Formatação dos links na interface */
+a {
+    color: #606060;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+/* Formatação do header */
+header#cabecalho {
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat left 80px;
+}
+/* Formatação do óculos no header */
+header#cabecalho img#icone {
+    position: absolute;
+    left: 978px;
+    top: 60px;
+}
+/* Formatação do h1 no header */
+header#cabecalho h1 {
+    font-family: 'fonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+/* Formatação do h2 no header */
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15pt;
+    color: #888888;
+    padding: 0px;
+    margin-top: 0px;
+}
+/* Formatação do section */
+section#corpo {
+    display: block;
+    width: auto;
+    padding: 10px;
+}
+/* Formatação dos textos da section */
+section#corpo p {
+    padding: 10px;
+}
+/* Formatação dos artigos da section */
+article#noticia-principal h2 {
+    font-size: 12pt;
+    color: #606060;
+    background: #dddddd;
+    padding: 5px 10px 5px 10px;
+    margin: 10px;
+}
+/* Formatação do cabeçalho do artigo */
+header#cabecalho-artigo h1 {
+    font-family: fonteLogo, sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+header#cabecalho-artigo h2 {
+    font-size: 14px;
+    color: #cecece;
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+}
+header#cabecalho-artigo h3 {
+    font-size: 15px;
+    color: #cecece;
+}
+header#cabecalho-artigo h3.direita {
+    font-size: 8pt;
+    color: #606060;
+    text-align: right;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+/* Formatação do album de fotos */
+ul#album-fotos {
+    list-style: none;
+    width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+}
+    /* Formatação dos quadrados do album */
+ul#album-fotos li {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 5px solid white;
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+}
+    /* Zoom na imagem quando passar o mouse por cima */
+ul#album-fotos li:hover {
+    -webkit-transform: scale(1.5);
+    -webkit-transition: all 0.3s ease-in;
+}
+    /* Aparecer a legenda quando passar o mouse por cima */
+ul#album-fotos li:hover span {
+    opacity: 1;
+}
+    /* Ocultando o nome das fotos */
+ul#album-fotos li span {
+    opacity: 0;
+    color: white;
+    font-size: 9pt;
+    text-shadow: 1px 1px 1px #000000;
+    background-color: rgba(0,0,0,.3);
+    padding: 5px;
+    line-height: 370px;
+}
+    /* Formatação da primeira foto */
+ul#album-fotos li#foto01 {
+    background: url("../_imagens/galeria-01.jpg") no-repeat;
+    background-position: center;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul#album-fotos li#foto01:hover {
+    background-position: 0 0;
+    background-size: 200px 200px;
+}
+    /* Formatação da segunda foto */
+ul#album-fotos li#foto02 {
+    background: url("../_imagens/galeria-02.jpg") no-repeat;
+    background-position: center;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul#album-fotos li#foto02:hover {
+    background-position: 0 0;
+    background-size: 200px 200px;
+}
+    /* Formatação da terceira foto */
+ul#album-fotos li#foto03 {
+    background: url("../_imagens/galeria-03.jpg") no-repeat;
+    background-position: center;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul#album-fotos li#foto03:hover {
+    background-position: 0 0;
+    background-size: 200px 200px;
+}
+    /* Formatação da quarta foto */
+ul#album-fotos li#foto04 {
+    background: url("../_imagens/galeria-04.jpg") no-repeat;
+    background-position: center;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul#album-fotos li#foto04:hover {
+    background-position: 0 0;
+    background-size: 200px 200px;
+}
+    /* Formatação da quinta foto */
+ul#album-fotos li#foto05 {
+    background: url("../_imagens/galeria-05.jpg") no-repeat;
+    background-position: center;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul#album-fotos li#foto05:hover {
+    background-position: 0 0;
+    background-size: 200px 200px;
+}
+    /* Formatação da sexta foto */
+ul#album-fotos li#foto06 {
+    background: url("../_imagens/galeria-06.jpg") no-repeat;
+    background-position: center;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul#album-fotos li#foto06:hover {
+    background-position: 0 0;
+    background-size: 200px 200px;
+}
+
+
+/* Formatação do footer */
+footer#rodape {
+    clear: both;
+    border-top: 1px #606060 solid;
+
+}
+footer#rodape p{
+    font-style: italic;
+    text-align: center;
+}
