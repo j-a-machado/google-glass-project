@@ -30,7 +30,7 @@ nav#menu li{
     display: inline-block;
     background-color: #dddddd;
     padding: 10px;
-    margin: 0px;
+    margin: 0;
     transition: background-color 1s;
 }
     /* Determina o que acontece quando passo o mouse em cima das opções do Menu */
@@ -57,8 +57,8 @@ nav#menu a:hover{
 div#interface {
     width: 1100px;
     background-color: #ffffff;
-    margin: -20px auto 0px auto;
-    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    margin: -20px auto 0 auto;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
     padding: 10px;
 }
     /* Formatação dos parágrafos */
@@ -91,16 +91,16 @@ header#cabecalho h1 {
     font-family: 'fonteLogo', sans-serif;
     font-size: 30pt;
     color: #606060;
-    padding: 0px;
-    margin-bottom: 0px;
+    padding: 0;
+    margin-bottom: 0;
 }
         /* Formatação do h2 no header */
 header#cabecalho h2 {
     font-family: 'Titillium Web', sans-serif;
     font-size: 15pt;
     color: #888888;
-    padding: 0px;
-    margin-top: 0px;
+    padding: 0;
+    margin-top: 0;
 }
     /* Formatação do section */
 section#corpo {
@@ -115,7 +115,7 @@ section#corpo p {
     padding: 10px;
 }
 section#corpo video#video01 {
-    margin: 0px 10px 10px 10px;
+    margin: 0 10px 10px 10px;
     width: 96%;
 }
         /* Formatação dos artigos da section */
@@ -131,15 +131,15 @@ header#cabecalho-artigo h1 {
     font-family: fonteLogo, sans-serif;
     font-size: 20pt;
     color: #606060;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 header#cabecalho-artigo h2 {
     font-size: 14px;
     color: #cecece;
     background-color: white;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 header#cabecalho-artigo h3 {
     font-size: 15px;
@@ -167,7 +167,7 @@ figure.foto-legenda img{
 figure.foto-legenda figcaption{
     opacity: 0;
     position: absolute;
-    top: 0px;
+    top: 0;
     background-color: rgba(0,0,0,.4);
     color: white;
     width: 100%;
@@ -183,7 +183,7 @@ figure.foto-legenda:hover figcaption{
         /* Formatação da tabela de especificações */
 table#tabelaspec {
     border: 1px #606060 solid;
-    border-spacing: 0px;
+    border-spacing: 0;
     margin-left: auto;
     margin-right: auto;
 }
