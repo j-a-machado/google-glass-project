@@ -2,9 +2,275 @@
 <html lang="pt-br">
      <head>
         <meta charset="UTF-8"/>
-        <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
-         <script language="JavaScript" src="_javascript/funcoes.js"></script>
         <title>Tudo sobre Google Glass</title>
+         <!-- <link rel="stylesheet" type="text/css" href="_css/estilo.css"/> -->
+         <script>
+             @charset "UTF-8";
+             @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+             @font-face {
+                 font-family: 'fonteLogo';
+                 src: url("../_fonts/bubblegum-sans-regular.otf");
+             }
+
+             /* Formatação do body inteiro do site */
+             body {
+                 font-family: Arial, sans-serif;
+                 background-color: #dddddd;
+                 color: rgba(0,0,0,1);
+             }
+
+
+             /* Formatação do Menu */
+             nav#menu{
+                 display: block;
+             }
+             /* Formatação da lista do menu */
+             nav#menu ul{
+                 list-style: none;
+                 text-transform: uppercase;
+                 position: absolute;
+                 top: -20px;
+                 left: 550px;
+             }
+             /* Formatação dos itens da lista do menu */
+             nav#menu li{
+                 display: inline-block;
+                 background-color: #dddddd;
+                 padding: 10px;
+                 margin: 0;
+                 transition: background-color 1s;
+             }
+             /* Determina o que acontece quando passo o mouse em cima das opções do Menu */
+             nav#menu li:hover{
+                 background-color: #606060;
+             }
+             /* Formata o h1 do Menu */
+             nav#menu h1{
+                 display: none;
+             }
+             /* Formata os links do Menu */
+             nav#menu a{
+                 color: black;
+                 text-decoration: none;
+             }
+             /* Determina o que acontece quando passo o mouse em cima do link das opções do Menu */
+             nav#menu a:hover{
+                 color: white;
+                 text-decoration: underline;
+             }
+
+
+             /* Formatação da interface */
+             div#interface {
+                 width: 1100px;
+                 background-color: #ffffff;
+                 margin: -20px auto 0 auto;
+                 box-shadow: 0 0 10px rgba(0,0,0,.5);
+                 padding: 10px;
+             }
+             /* Formatação dos parágrafos */
+             p {
+                 text-align: justify;
+                 text-indent: 50px;
+             }
+             /* Formatação dos links na interface */
+             a {
+                 color: #606060;
+                 text-decoration: none;
+             }
+             a:hover {
+                 text-decoration: underline;
+             }
+             /* Formatação do header */
+             header#cabecalho {
+                 border-bottom: 1px #606060 solid;
+                 height: 150px;
+                 background: url("../_imagens/glass-logo-peq.jpg") no-repeat left 80px;
+             }
+             /* Formatação do óculos no header */
+             header#cabecalho img#icone {
+                 position: absolute;
+                 left: 1020px;
+                 top: 82px;
+             }
+             /* Formatação do h1 no header */
+             header#cabecalho h1 {
+                 font-family: 'fonteLogo', sans-serif;
+                 font-size: 30pt;
+                 color: #606060;
+                 padding: 0;
+                 margin-bottom: 0;
+             }
+             /* Formatação do h2 no header */
+             header#cabecalho h2 {
+                 font-family: 'Titillium Web', sans-serif;
+                 font-size: 15pt;
+                 color: #888888;
+                 padding: 0;
+                 margin-top: 0;
+             }
+             /* Formatação do section */
+             section#corpo {
+                 display: block;
+                 width: 600px;
+                 float: left;
+                 border-right: 1px #606060 solid;
+                 padding: 10px;
+             }
+             /* Formatação dos textos da section */
+             section#corpo p {
+                 padding: 10px;
+             }
+             section#corpo video#video01 {
+                 margin: 0 10px 10px 10px;
+                 width: 96%;
+             }
+             /* Formatação dos artigos da section */
+             article#noticia-principal h2 {
+                 font-size: 12pt;
+                 color: #606060;
+                 background: #dddddd;
+                 padding: 5px 10px 5px 10px;
+                 margin: 10px;
+             }
+             /* Formatação do cabeçalho do artigo */
+             header#cabecalho-artigo h1 {
+                 font-family: fonteLogo, sans-serif;
+                 font-size: 20pt;
+                 color: #606060;
+                 margin-bottom: 0;
+                 margin-top: 0;
+             }
+             header#cabecalho-artigo h2 {
+                 font-size: 14px;
+                 color: #cecece;
+                 background-color: white;
+                 margin: 0;
+                 padding: 0;
+             }
+             header#cabecalho-artigo h3 {
+                 font-size: 15px;
+                 color: #cecece;
+             }
+             header#cabecalho-artigo h3.direita {
+                 font-size: 8pt;
+                 color: #606060;
+                 text-align: right;
+                 font-style: italic;
+                 margin-bottom: 30px;
+             }
+             /* Formatação das imagens com legenda */
+             figure.foto-legenda{
+                 position: relative;
+                 border: 8px solid white;
+                 box-shadow: 1px 1px 4px black;
+             }
+             /*Edição apenas na foto*/
+             figure.foto-legenda img{
+                 width: 100%;
+                 height: 100%;
+             }
+             /*Faz a legenda ficar invisível e aparecer quando passa o mouse em cima da foto*/
+             figure.foto-legenda figcaption{
+                 opacity: 0;
+                 position: absolute;
+                 top: 0;
+                 background-color: rgba(0,0,0,.4);
+                 color: white;
+                 width: 100%;
+                 height: 100%;
+                 padding: 10px;
+                 box-sizing: border-box;
+                 transition: opacity 1s;
+             }
+             /*Faz a legenda levar 1 segundo para aparecer e sumir*/
+             figure.foto-legenda:hover figcaption{
+                 opacity: 1;
+             }
+             /* Formatação da tabela de especificações */
+             table#tabelaspec {
+                 border: 1px #606060 solid;
+                 border-spacing: 0;
+                 margin-left: auto;
+                 margin-right: auto;
+             }
+             /* Formatação do título da tabela */
+             table#tabelaspec caption {
+                 color: #888888;
+                 font-size: 15pt;
+                 font-weight: bolder;
+                 vertical-align: bottom;
+             }
+             table#tabelaspec caption span {
+                 display: block;
+                 float: right;
+                 font-size: 9px;
+                 margin-top: 10px;
+
+             }
+             /*Formatação das linhas da tabela de especificação */
+             table#tabelaspec td {
+                 border: 1px #606060 solid;
+                 padding: 10px;
+             }
+             /* Formatação dos textos da primeira coluna da tabela */
+             table#tabelaspec td.colunaesquerda {
+                 text-align: right;
+                 background-color: #606060;
+                 color: #ffffff;
+                 font-weight: bold;
+             }
+             /* Formatação dos textos da segunda coluna da tabela */
+             table#tabelaspec td.colunadireita {
+                 background-color: #cecece;
+             }
+
+
+
+             /* Formatação do aside */
+             aside#lateral {
+                 display: block;
+                 width: 445px;
+                 float: right;
+                 padding: 10px;
+                 background-color: #cecece;
+                 margin-top: 15px;
+                 box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+             }
+             /* Formatação dos títulos do aside */
+             aside#lateral h1 {
+                 font-family: fonteLogo, sans-serif;
+                 color: #606060;
+                 font-size: 25px;
+             }
+             aside#lateral h2 {
+                 background-color: #606060;
+                 color: #ffffff;
+                 font-size: 18px;
+                 padding: 10px;
+             }
+             aside#lateral p {
+                 font-size: 14px;
+             }
+             aside#lateral video#video02 {
+                 margin-top: -15px;
+                 width: 445px;
+             }
+
+
+             /* Formatação do footer */
+             footer#rodape {
+                 clear: both;
+                 border-top: 1px #606060 solid;
+
+             }
+             footer#rodape p{
+                 font-style: italic;
+                 text-align: center;
+             }
+         </script>
+         <script language="JavaScript" src="_javascript/funcoes.js"></script>
+
     </head>
     <body>
         <div id="interface">
